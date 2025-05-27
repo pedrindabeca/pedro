@@ -118,6 +118,42 @@ section h2::after {
     min-width: 300px;
 }
 
+/* Projetos */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.projects-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0 ,0 ,0 ,0.1);
+    transition: tranform 0.3, box-shadow 0.3;
+}
+.projects-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0 ,0 ,0 ,0.1);
+}
+
+.project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-info h3 {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+
+
 /* Contato */
 .contact-info{
     text-align: center;
@@ -159,6 +195,15 @@ footer {
 /* Rensponsividade */
 @media (max-width: 768px) {
     nav ul {
-        
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    section {
+        padding: 2rem 5%;
     }
 }
